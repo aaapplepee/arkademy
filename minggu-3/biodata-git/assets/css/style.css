@@ -57,29 +57,39 @@ img{
     float: right;
 }
 
-.nama{
+#nama{
     padding: 2px;
     margin: 1px;
+    color: darkblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.tanggal-lahir{
+#ttl{
     padding: 2px;
     margin: 1px;
+    color: darkcyan;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.umur{
+#umur{
     padding: 2px;
     margin: 1px;
+    color: darkgoldenrod;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.sekolah{
+#sekolah{
     padding: 2px;
     margin: 1px;
+    color: darkgreen;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.citacita{
+#citacita{
     padding: 2px;
     margin: 1px;
+    color: darkslateblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
 }
 
 .keterangan{

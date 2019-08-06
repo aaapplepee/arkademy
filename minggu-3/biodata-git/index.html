@@ -15,26 +15,11 @@
         </div>
         <div class="kotak-kedua">
             <h1>Wikipedia</h1>
-            <div class="nama">
-                <span>Nama :</span>
-                <span>Akmal Widad Iskandar</span>
-            </div>
-            <div class="tanggal-lahir">
-                <span>tanggal lahir :</span>
-                <span>22 - November - 2002</span>
-            </div>
-            <div class="umur">
-                <span>Umur :</span>
-                <span>16 Tahun</span>
-            </div>
-            <div class="sekolah">
-                <span>Sekolah :</span>
-                <span>SMK JAKARTA PUSAT 1</span>
-            </div>
-            <div class="citacita">
-                <span>Cita-Cita :</span>
-                <span>Music Produser</span>
-            </div>
+            <div id="nama"></div>
+            <div id="ttl"></div>
+            <div id="umur"></div>
+            <div id="sekolah"></div>
+            <div id="citacita"></div>
         </div>
         <div class="kotak-ketiga">
             <h1>Menurut Wikipedia</h1>
@@ -42,5 +27,28 @@
                 <span>Akmal adalah seorang murid SMK Jakarta Pusat 1 yang hobi bermain alat DJ, dia bercitacita untuk menjadi musik produser walaupun jurusannya berbasis IT tapi dia tidak menyerah untuk menjadi seorang musik produser</span>
             </div>
         </div>
+
+        <script>
+            let data = {
+                nama:"Nama : Akmal Widad Iskandar",
+                ttl:"Tanggal Lahir : 22 November 2002",
+                umur:"Umur : 16",
+                sekolah:"Sekolah : SMK Jakarta Pusat 1",
+                citacita:"Cita-Cita : Jadi Hokage"
+            }
+
+            let nama = document.getElementById('nama')
+            let ttl = document.getElementById('ttl')
+            let umur = document.getElementById('umur')
+            let sekolah = document.getElementById('sekolah')
+            let citacita = document.getElementById('citacita')
+            
+
+            nama.innerHTML = data.nama
+            ttl.innerHTML = data.ttl
+            umur.innerHTML = data.umur
+            sekolah.innerHTML = data.sekolah
+            citacita.innerHTML = data.citacita
+        </script>
 </body>
 </html>
