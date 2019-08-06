@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form-Pendaftaran</title>
+    <style>
+        body{
+            background-image: url(ok.jpg)
+        }
+
+        h1{
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        input{
+            padding: 5px;
+            margin: 5px;
+        }
+
+        td label{
+            margin: 10px;
+            color: white;
+        }
+
+        button{
+            margin: 5px;
+            padding: 5px;
+        }
+
+        #alamat{
+            width: 200px;
+            height: 100px;
+        }
+        #hasil{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="sembunyi">
+    <h1>Pendaftaran Sunat Online</h1>
+    <table>
+        
+            <tr>
+                <td><label for="Nama">Nama</label></td>
+                <td><input type="text" name="Nama" id="nama" placeholder="Masukan Nama"></td>
+            </tr>
+
+            <tr>
+                <td><label for="Kelas">Kelas</label></td>
+                <td><input type="text" name="Kelas" id="kelas" placeholder="Masukan Kelas"></td>
+            </tr>
+
+            <tr>
+                <td><label for="Alamat">Alamat</label></td>
+                <td><input type="text" name="Alamat" id="alamat" placeholder="Tulis Alamat"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><button onclick="daftar()">Oke!</button></td>
+            </tr>
+        
+    </table>
+</div>
+    <div id="hasil"></div>
+    <script>
+        function daftar(){
+        var nama = document.getElementById("nama").value;
+        var kelas = document.getElementById("kelas").value;
+        var alamat = document.getElementById("alamat").value;
+        
+        document.getElementById("hasil").innerHTML = "Selamat"+ " "+" "+nama+" " + kelas +" "+ "Telah Mendaftar Sunat Online Dengan Alamat"+" "+alamat;
+        var x = document.getElementById("sembunyi");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+        }
+    </script>
+</body>
+</html>
