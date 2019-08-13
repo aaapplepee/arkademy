@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .calc{
+        width: 300px;
+        background-color: red;
+    }
+
+    .nav{
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    .title{
+        flex: 1;
+        text-align: center;
+    }
+
+    .close, .minimaze, .maximaze, .menu{
+        padding: 5px;
+        height: 20px;
+        width: 20px;
+        margin-left: 3px;
+        margin-right: 3px;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+
+    .display{
+        background-color: white;
+        height: 50px;
+        margin: 5px;
+    }
+
+    .input{
+        display: flex;
+        flex-direction: column;
+        background-color: green;
+    }
+
+    .row{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .square{
+        flex: 1;
+        text-align: center;
+        margin: 3px;
+        padding: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 3px;
+        background-color: gray; 
+    }
+
+    .wrapper{
+        display: block;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <div class="calc">
+        <div class="nav">
+            <div class="close">x</div>
+            <div class="minimaze">-</div>
+            <div class="maximaze">o</div>
+            <div class="title">Basic Mode</div>
+            <div class="menu">M</div>
+        </div>
+        <div class="display"></div>
+        <div class="input">
+            <div class="wrapper">
+            <div class="row">
+                <div class="square">7</div>
+                <div class="square">8</div>
+                <div class="square">9</div>
+            </div>
+            </div>
+            <div class="wrapper">
+            <div class="row">
+                <div class="square">4</div>
+                <div class="square">5</div>
+                <div class="square">6</div>
+            </div>
+            </div>
+            <div class="wrapper">
+            <div class="row">
+                <div class="square">1</div>
+                <div class="square">2</div>
+                <div class="square">3</div>
+            </div>
+            </div>
+            <div class="wrapper">
+            <div class="row">
+                <div class="square">0</div>
+                <div class="square">/</div>
+                <div class="square">C</div>
+            </div>
+            </div>
+            <div class="wrapper">
+            <div class="row">
+                <div class="square">+</div>
+                <div class="square">-</div>
+                <div class="square">X</div>
+            </div>
+            </div>
+            <div class="wrapper">
+            <div class="row">
+                <div class="square">=</div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

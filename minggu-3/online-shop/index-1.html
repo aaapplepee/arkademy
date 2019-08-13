@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Online Shop</title>
+  <style>
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    width:800px;
+    margin: 0 auto;
+  }
+  .item{
+    background: rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: row;
+    min-height: 200px;
+    padding:20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+    border-radius: 25px;
+  }
+  .item .picture{
+    flex:1;
+    height: auto;
+    width: 100%;
+    background: rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+  }
+  .item .picture .thumb{
+    display: block;
+    width:100%;
+  }
+  .item .text{
+    flex:3;
+    color:rgba(0,0,0,0.8);
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .item .text .name{
+    color:black;
+    font-size: 23px;
+    font-weight: bold;
+  }
+  .item .text .price{
+    font-size: 20px;
+    color: rgba(255,0,0,0.8);
+    font-weight: bold;
+  }
+  .item .text .rating{
+    font-weight: bold;
+  }
+  .item .text .rating::before{
+    content:"Quality: "
+  }
+  </style>
+</head>
+<body>
+  <div id="item-list">
+  </div>
+  <script>
+    let data = [
+      {
+        "name":"Whiteboard",
+        "description":"A whiteboard (also known by the terms marker board, dry-erase board, wipe board, dry-wipe board, and pen-board) is a glossy, usually white surface for nonpermanent markings. Whiteboards are analogous to blackboards, but with a smoother surface allowing rapid marking and erasing of markings on their surface. The popularity of whiteboards increased rapidly in the mid-1990s and they have become a fixture in many offices, meeting rooms, school classrooms, and other work environments.",
+        "price":250000,
+        "image":[
+          "assets/wb1.jpg",
+          "assets/wb2.jpg",
+          "assets/wb3.jpg"
+        ],
+        "rating":[
+          "0","1","21","6","22"
+        ]
+      },
+      {
+        "name":"Chair",
+        "description":"One of the basic pieces of furniture, a chair is a type of seat. Its primary features are two pieces of a durable material, attached as back and seat to one another at a 90° or slightly greater angle, with usually the four corners of the horizontal seat attached in turn to four legs—or other parts of the seat's underside attached to three legs or to a shaft about which a four-arm turnstile on rollers can turn—strong enough to support the weight of a person who sits on the seat (usually wide and broad enough to hold the lower body from the buttocks almost to the knees) and leans against the vertical back (usually high and wide enough to support the back to the shoulder blades). ",
+        "price":130000,
+        "image":[
+          "assets/c3.jpg",
+          "assets/c2.jpg",
+          "assets/c1.jpg"
+        ],
+        "rating":[
+          "0","50","1","2","10"
+        ]
+      },
+      {
+        "name":"Totebag",
+        "description":"A tote bag is a large and often unfastened bag with parallel handles that emerge from the sides of its pouch. The word tote is probably African in origin and came into English via Gullah. Totes are often used as reusable shopping bags.",
+        "price":80000,
+        "image":[
+          "assets/tb3.jpg",
+          "assets/tb2.jpg",
+          "assets/tb1.jpg"
+        ],
+        "rating":[
+          "12","0","0","0","5"
+        ]
+      },
+      {
+        "name":"Boardmarker",
+        "description":"A marker pen, fineliner, marking pen, felt-tip marker, felt-tip pen, flow marker, texta (in Australia), sketch pen (in India) or koki (in South Africa), is a pen which has its own ink source and a tip made of porous, pressed fibers such as felt.",
+        "price":40000,
+        "image":[
+          "assets/sp1.jpg",
+          "assets/sp2.jpg",
+          "assets/sp3.jpg"
+        ],
+        "rating":[
+          "0","0","1","3","8"
+        ]
+      },
+      {
+        "name":"Book",
+        "description":"As a physical object, a book is a stack of usually rectangular pages (made of papyrus, parchment, vellum, or paper) oriented with one edge tied, sewn, or otherwise fixed together and then bound to the flexible spine of a protective cover of heavier, relatively inflexible material.",
+        "price":80000,
+        "image":[
+          "assets/buku1.jpg",
+          "assets/buku2.jpg",
+          "assets/buku3.jpg"
+        ],
+        "rating":[
+          "1","2","2","2","31"
+        ]
+      }
+    ];
+    function rating(arr){
+      let current = "";
+      let rating = "";
+      let arrRating = ["Buruk","Cukup","Baik","Sangat Baik","Super"];
+      arr.reverse();
+      arr.forEach((v,i)=>{
+        if(current !=""){
+          if(current > v){
+            rating = arrRating[i]
+          }
+        }
+        current = v;
+      })
+      return rating;
+    }
+    
+    let element = "";
+    data.forEach((v,i)=>{
+      element+='\
+      <div class="item">\
+        <div class="picture">\
+          <img class="thumb" src="'+data[i].image[2]+'"></img>\
+        </div>\
+        <div class="text">\
+          <div class="name">'+data[i].name+'</div>\
+          <div class="price">Rp.'+data[i].price+',-</div>\
+          <div class="description">'+data[i].description+'</div>\
+          <div class="rating">'+rating(data[i].rating)+'</div>\
+        </div>\
+      </div>\
+      ';
+    });
+    document.getElementById('item-list').innerHTML = element;
+  </script>
+</body>
+</html>
