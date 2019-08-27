@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     const seminar = 'ketiduran';
+
+     const janjian = kondisi => new Promise((resolve, reject)=>{
+        if (kondisi === 'ketiduran'){
+            resolve('Saya ketiduran lupa mengikuti seminar');
+        } else{
+            reject('Saya ingin mengikuti seminar');
+        }
+     });
+
+     janjian(seminar)
+     .then(res => console.log(res))
+     .catch(err => console.error(err));
+    </script>
+</body>
+</html>
