@@ -1,0 +1,14 @@
+{
+  "name": "belajar-npm",
+  "version": "1.0.0",
+  "description": "bejalar npm",
+  "main": "indexoop.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@akmal",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.24.0"
+  }
+}
