@@ -19,7 +19,7 @@ class Login extends Component {
                         <label>Password</label>
                         <input type="password" placeholder="Enter Password" />
 
-                        <button type="submit">Login</button>
+                        <a href="./Dashboard" className="submit">Login</a>
 
                     </div>
                 </form>

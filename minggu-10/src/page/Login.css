@@ -1,5 +1,6 @@
 h1{
     text-align: center;
+    margin-left: 10%;
 }
 
 .Logo{
@@ -27,6 +28,8 @@ label{
 .Sebuah-kotak{
     height: 300px;
     width: 300px;
+    margin: 80px;
+    margin-left: 40%;
 
 }
 
@@ -35,8 +38,12 @@ form {
     width: 350px;
 }
 
-button{
-    background-color: greenyellow;
-    height: 30px;
-    width: 100%;
+.submit{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-decoration: none;
+    border: 1px solid black;
+    background: greenyellow;
+    color: black;
+    margin-left: 38%;
 }
